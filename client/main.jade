@@ -1,0 +1,65 @@
+head
+  title Briqs virtual currency
+  link(rel="shortcut icon", href="/favicon.png", type="image/png")
+  link(rel="icon", href="/favicon.png", type="image/png")
+  link(href='https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic' rel='stylesheet' type='text/css')
+  meta(name="viewport" content="initial-scale=1, width=device-width")
+
+
+template(name="layout")
+  .container
+    .row
+      .col-lg-6.col-lg-offset-3
+        +yield
+
+
+template(name="login")
+  +loginButtons
+
+
+template(name="loading")
+  p Please wait, it's loading…
+
+
+template(name="home")
+  .well
+    p You (#{me.slack.name}) received #{me.briqs.has}bq. You can still give #{me.briqs.canGive}bq. You gave #{me.briqs.gave}bq.
+      a(href="#" id="logout") (log out)
+
+  .well
+    h1 Slack members
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th #
+          th name
+          th has
+          th can give
+          th gave
+      tbody
+        each members
+          tr
+            td #{rank}
+            th #{slack.name}
+            td #{briqs.has}
+            td #{briqs.canGive}
+            td #{briqs.gave}
+
+  .well
+    h1 Latest transaction
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th date
+          th from
+          th to
+          th amount
+          th reason
+      tbody
+        each logs
+          tr
+            td #{date}
+            td #{from}
+            td #{to}
+            td #{amount}
+            td #{reason}

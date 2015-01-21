@@ -1,0 +1,24 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+accounts-ui
+spiderable
+iron:router
+acemtp:accounts-slack
+http
+aldeed:simple-schema
+aldeed:autoform
+aldeed:collection2
+jparker:crypto-md5
+oauth1
+oauth
+natestrauser:font-awesome
+mquandalle:jade
+twbs:bootstrap
+fezvrasta:bootstrap-material-design
+audit-argument-checks
+check
+momentjs:moment
