@@ -1,3 +1,8 @@
+// If running on Meteor free hosting and not used all the time we need to ping the server to keep it alive so the 4 hour briq function is still run
+// Meteor.setInterval(function() {
+//  Meteor.http.get('http://{{name}}.meteor.com');
+//  console.log('Ping site to keep-alive');
+// }, 1000*60*5);
 
 // Every 4 hours, the banq gives a briq to everybody
 
