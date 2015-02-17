@@ -1,6 +1,12 @@
+///ping to keep alive
+if(Meteor.settings.pingKeepAlive) {
+  Meteor.setInterval(function() {
+      Meteor.http.get(Meteor.settings.pingUrl);
+      console.log('ping site')
+  }, 300000); // every 5 minutes (300000)
+}
 
 // Every 4 hours, the banq gives a briq to everybody
-
 Meteor.setInterval(function() {
   Members.update({ 'slack.is_restricted': false }, { $inc: { 'briqs.canGive': 1 } }, { multi: true });
   console.log('Everybody has one more briq.');

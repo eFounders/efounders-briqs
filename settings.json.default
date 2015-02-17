@@ -1,7 +1,8 @@
 {
   "slackToken": "get the token here: https://api.slack.com/web#basics",
   "slackTeamId": "get the team id here: https://api.slack.com/methods/auth.test/test",
-
+  "pingKeepAlive": true,
+  "pingUrl": "http://{{appname}}.meteor.com",
   "public": {
     "production": true
   }
