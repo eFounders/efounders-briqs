@@ -1,7 +1,7 @@
 ///ping to keep alive
 if(Meteor.settings.pingKeepAlive) {
   Meteor.setInterval(function() {
-      Meteor.http.get(Meteor.settings.pingUrl);
+      Meteor.http.get(Meteor.absoluteUrl());
       console.log('ping site')
   }, 300000); // every 5 minutes (300000)
 }
