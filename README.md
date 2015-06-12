@@ -68,3 +68,17 @@ Voila!
 You can type `/briq` on Slack to see how many briq you have and can give.
 
 You can give briqs with `/give john 1 for the help` on Slack to give one briq.
+
+## Give your team some initial briqs
+
+Once you have your briqs app up and running, you may want to give each member
+some initial briqs to get started:
+
+- Connect to your app's mongo db and give each member 100 briqs:
+
+```bash
+$ meteor mongo http://**the-name-of-your-slack-team**.meteor.com
+Welcome to the MongoDB shell.
+
+> db.members.update({ 'slack.is_restricted': false }, { $inc: { 'briqs.canGive': 100 } }, { multi: true })
+```
