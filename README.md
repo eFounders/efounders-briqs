@@ -12,9 +12,11 @@ Each time a line start with a `$`, it means you have to type the command in the 
 
 - Open a terminal and type:
 
+```
   $ git clone https://github.com/efounders/efounders-briqs.git
   $ cd efounders-briqs
   $ cp settings.json.default settings.json
+```
 
 - Open the file `settings.json`
 
