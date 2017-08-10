@@ -33,7 +33,9 @@ Each time a line start with a `$`, it means you have to type the command in the 
 
 - Find the subdomain you want to use to host your server, you can try the name of your slack team or anything that is available:
 
+```
   $ meteor deploy **the-name-of-your-slack-team** --settings settings.json
+```
 
 - Open a browser to `http://**the-name-of-your-slack-team**.meteor.com`
 
