@@ -1,3 +1,5 @@
+👋 Hey there, This repository is not maintained, but we rewrote Briq from the ground up and made it available for the world to use it easily: https://www.givebriq.com
+
 
 # briqs, the virtual currency on Slack
 
